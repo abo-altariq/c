@@ -1,0 +1,36 @@
+
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+void ReadAandB(int& A, int& B)
+{
+	cout << "enter B" << endl;
+	cin >> B;
+
+	cout << "enter A" << endl;
+	cin >> A;
+}
+
+int CalculateArea(int A, int B)
+{
+	int area;
+	area = A * B;
+
+	return area;
+}
+
+void PrintArea(int area)
+{
+	cout << "area =" << area;
+}
+
+int main()
+{
+	int A, B;
+	ReadAandB(A, B);
+	PrintArea(CalculateArea(A, B));
+
+	return 0;
+}
