@@ -1,0 +1,38 @@
+
+#include<iostream>
+#include<string>
+#include<cmath>
+
+using namespace std;
+
+void ReadNumbers(float& A, float& B)
+{
+	cout << "enter A" << endl;
+	cin >> A;
+
+	cout << "enter B" << endl;
+	cin >> B;
+}
+
+float RectangleAreaBySideAndDiagonal(float A, float B)
+{
+	float area;
+	area = A * sqrt(pow(B, 2) - pow(A, 2));
+
+	return area;
+}
+
+void PrintArea(float area)
+{
+	cout << "the arae is :" << area << endl;
+}
+
+int main()
+{
+	float A, B;
+	ReadNumbers(A, B);
+	PrintArea(RectangleAreaBySideAndDiagonal(A, B));
+
+	return 0;
+
+}
