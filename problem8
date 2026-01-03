@@ -1,0 +1,40 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+enum enpassfail{pass=1,fail=2};
+
+int raedmark()
+{
+	int mark;
+	cout << "please enter mark?" << endl;
+	cin >> mark;
+
+	return mark;
+}
+
+enpassfail chekmark(int mark)
+{
+	if (mark >= 50)
+		return enpassfail::pass;
+	else
+		return enpassfail::fail;
+
+
+}
+void printresult(int mark)
+{
+	if (chekmark(mark) == enpassfail::pass)
+		cout << "\n pass\n";
+	else
+		cout << "\n fail\n";
+}
+
+int main()
+{
+	printresult(raedmark());
+
+	return 0;
+}
+	
+	
