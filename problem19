@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+float ReaddD()
+{
+	float D;
+	cout << "enter D" << endl;
+	cin >> D;
+
+	return D;
+}
+
+float circleArea(float D)
+{
+	const float PI = 3.14;
+	return (PI * pow(D, 2)) / 4;
+}
+
+void PrintArea(float area)
+{
+	cout << "the area is :" << area << endl;
+}
+
+int main()
+{
+	PrintArea(circleArea(ReaddD()));
+
+	return 0;
+}
