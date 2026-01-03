@@ -1,0 +1,55 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+struct stinfo
+{
+	int age;
+	bool hasdriverlicense;
+	bool haswasta;
+};
+
+stinfo readinfo()
+{
+	stinfo info;
+	cout << "please enter age" << endl;
+	cin >> info.age;
+
+	cout << "you have driver license" << endl;
+	cin >> info.hasdriverlicense;
+
+	cout << "you have wasta" << endl;
+	cin >> info.haswasta;
+
+	return info;
+}
+
+bool isaccebted(stinfo info)
+{
+	if (info.haswasta)
+	{
+		return true;
+	}
+
+	else
+	{
+		return(info.age > 21 && info.hasdriverlicense);
+	}
+		
+}
+
+void printresult(stinfo info)
+{
+	if (isaccebted(info))
+		cout << "haired" << endl;
+	else
+		cout << "rejected" << endl;
+
+}
+
+int main()
+{
+	printresult(readinfo());
+
+	return 0;
+}
