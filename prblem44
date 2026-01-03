@@ -1,0 +1,53 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+enum enDayOfWeeks{sat=1,sun=2,mon=3,tue=4,the=5,wed=6,fri=7};
+
+int ReadNumberBetweenFromAndTo(string massage,int from,int to)
+{
+	int number = 0;
+	do
+	{
+		cout << massage << endl;
+		cin >> number;
+	} while (number<from && number>to);
+
+	return number;
+
+}
+
+enDayOfWeeks ReadDayOfWeek()
+{
+	return (enDayOfWeeks)ReadNumberBetweenFromAndTo("Enter Number Between", 1, 7);
+}
+
+string getdayofweek(enDayOfWeeks day)
+{
+	switch (day)
+	{
+	case enDayOfWeeks::sat:
+		return "satrday";
+	case enDayOfWeeks::sun:
+		return "sunday";
+	case enDayOfWeeks::mon:
+		return "monday";
+	case enDayOfWeeks::the:
+		return "thersday";
+	case enDayOfWeeks::tue:
+		return "tusday";
+	case enDayOfWeeks::wed:
+		return "wensday";
+	case enDayOfWeeks::fri:
+		return "friday";
+	default:
+			return "worng day";
+	}
+}
+
+int main()
+{
+	cout << "the day is" << getdayofweek(ReadDayOfWeek());
+
+	return 0;
+}
