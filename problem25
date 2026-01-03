@@ -1,0 +1,40 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int readage()
+{
+	int age;
+	cout << "enter age between 18, 45" << endl;
+	cin >> age;
+
+	return age;
+}
+bool validataage(int age, int from, int to)
+{
+	return (age >= from && age <= to);
+}
+ 
+int readuntilagebetween(int from, int to)
+{
+	int age = 0;
+
+	do
+	{
+		age = readage();
+
+	} while (!validataage(age,18, 45));
+	return age;
+}
+
+void printage(int age)
+{
+	cout << "your age is :" << age << endl;
+}
+
+int main()
+{
+	printage(readuntilagebetween(18, 45));
+
+	return 0;
+}
