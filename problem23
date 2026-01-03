@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+void ReadABC(float& a, float& b, float& c)
+{
+	cout << "enter a" << endl;
+	cin >> a;
+
+	cout << "enter b"<<endl;
+		cin >> b;
+
+		cout << "enter c" << endl;
+		
+	cin >> c;
+}
+
+float circlearea(float a,float b, float c)
+{
+	const float PI = 3.14;
+	
+	float p = (a + b + c) / 2;
+	float t = (a * b * c) / (4 * sqrt(p * (p - a) * (p - b) * (p - c)));
+	t *= t;
+	return PI * t;
+
+}
+void Printcirclearea(float area)
+{
+	cout << "the area is:" << area << endl;
+}
+
+int main()
+{
+	float a, b, c;
+	ReadABC(a, b, c);
+	Printcirclearea(circlearea(a, b, c));
+
+	return 0;
+}
