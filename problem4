@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+struct stinfo
+{
+	int age;
+	bool hasdriverlicense;
+};
+
+stinfo readinfo()
+{
+	stinfo info;
+	cout << "please enter age" << endl;
+	cin >> info.age;
+	cout << "you have driver license" << endl;
+	cin >> info.hasdriverlicense;
+
+	return info;
+}
+
+bool isacsibted(stinfo info)
+{
+	return(info.age > 21 && info.hasdriverlicense==1);
+}
+
+void printresult(stinfo info)
+{
+	if (isacsibted(info))
+		cout << "\n haired" << endl;
+
+	else
+		cout << "\n rejected" << endl;
+}
+
+int main()
+{
+	printresult(readinfo());
+
+	return 0;
+}
