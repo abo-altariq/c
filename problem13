@@ -1,0 +1,44 @@
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+void readnumbers(int& num1, int& num2, int& num3)
+{
+	cout << "enter num1" << endl;
+	cin >> num1;
+
+	cout << "enter num2" << endl;
+	cin >> num2;
+
+	cout << "enter num3" << endl;
+	cin >> num3;
+}
+
+int maxof3numbers(int num1, int num2, int num3)
+{
+	if (num1 > num2)
+		if (num1 > num3)
+			return num1;
+		else
+			return num3;
+	else
+	if (num2 > num3)
+		return num2;
+	else
+		return num3;
+}
+
+void printmaxnumber(int max)
+{
+	cout << "max number :" << max << endl;
+}
+
+int main()
+{
+	int num1, num2, num3;
+	readnumbers(num1, num2, num3);
+	printmaxnumber(maxof3numbers(num1, num2, num3));
+
+	return 0;
+}
