@@ -1,0 +1,59 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+
+struct stinfo
+{
+	string name;
+	int age;
+	string city;
+	string country;
+	int monthlysalary;
+	char gender;
+	bool married;
+};
+
+void readinfo(stinfo& info)
+{
+	cout << "enter name " << endl;
+	cin >> info.name;
+	cout << "enter age " << endl;
+	cin >> info.age;
+	cout << "enter city " << endl;
+	cin >> info.city;
+	cout << "enter country " << endl;
+	cin >> info.country;
+	cout << "enter gender " << endl;
+	cin >> info.gender;
+	cout << "enter monthly salary" << endl;
+	cin >> info.monthlysalary;
+	cout << "enter married " << endl;
+	cin >> info.married;
+}
+
+void printinfo(stinfo info)
+{
+	cout << "*******************************" << endl;
+	cout << "name :" << info.name << endl;
+	cout << "age " << info.age << endl;
+	cout << "city :" << info.city << endl;
+	cout << " country :" << info.country << endl;
+	cout << " monthly salary : " << info.monthlysalary << endl;
+	cout << "yearly salary :" << info.monthlysalary * 12 << endl;
+	cout << "gender :" << info.gender << endl;
+	cout << "married :" << info.married << endl;
+	cout << "********************************" << endl;
+
+}
+
+int main()
+{
+	stinfo person1info;
+
+	readinfo(person1info);
+	printinfo(person1info);
+
+	return 0;
+}
