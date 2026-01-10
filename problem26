@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+enum encountreschoice{palstine=1 ,jordan=2 ,egybt=3, tonis=4};
+int main()
+{
+	
+	
+	cout << "********************************************\n\n";
+	cout << "pleas enter the number of country" << endl;
+	cout << "(1)palstine\n";
+	cout << "(2)jordan\n";
+	cout << "(3)ejybt\n";
+	cout << "(4)tonis\n";
+	cout << "********************************************\n";
+	cout << "your choise :";
+	int c;
+	encountreschoice country;
+	cin >> c;
+	country = (encountreschoice)c;
+
+	if (country == encountreschoice::palstine)
+	{
+		cout << "palstine\n";
+	}
+	else if (country == encountreschoice::jordan)
+	{
+		cout << "jordan\n";
+	}
+	else if (country == encountreschoice::egybt)
+	{
+		cout << "ejybt\n";
+	}
+	else if (country == encountreschoice::tonis)
+	{
+		cout << "tonis\n";
+	}
+	else
+	{
+		cout << "others\n";
+	};
+	return 0;
+}
