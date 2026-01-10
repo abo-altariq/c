@@ -1,0 +1,66 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+enum enMonthOfYear{jan=1,feb=2,mar=3,apr=4,may=5,jun=6,jul=7,aug=8,sep=9,oct=10,nov=11,dec=12};
+
+int ReadPosetivenumberbetween1from12(string massage)
+{
+	int number = 0;
+	do
+	{
+		cout << massage << endl;
+		cin >> number;
+
+	} while (number < 1 || number > 12);
+	return number;
+}
+
+enMonthOfYear ReadMonthofyear()
+{
+	return (enMonthOfYear)ReadPosetivenumberbetween1from12("Please enter nnumber between 1 and 12");
+}
+
+string GetMonthOfYear(enMonthOfYear Month)
+{
+	switch (Month)
+	{
+	case enMonthOfYear::jan:
+		return "january";
+	case enMonthOfYear::feb:
+		return "febrewary";
+	case enMonthOfYear::mar:
+		return "Marce";
+	case enMonthOfYear::apr:
+		return "April";
+	case enMonthOfYear::may:
+		return "May";
+	case enMonthOfYear::jun:
+		return "june";
+	case enMonthOfYear::jul:
+		return "julay";
+	case enMonthOfYear::aug:
+		return "augast";
+	case enMonthOfYear::sep:
+		return "septenper";
+	case enMonthOfYear::oct:
+		return "octobar";
+	case enMonthOfYear::nov:
+		return "novembar";
+	case enMonthOfYear::dec:
+		return "decmber";
+	default:
+		return "octobar";
+
+		
+			
+	}
+}
+
+int main()
+{
+
+	cout <<GetMonthOfYear(ReadMonthofyear());
+
+	return 0;
+}
