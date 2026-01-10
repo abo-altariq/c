@@ -1,0 +1,55 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int Readnumbers()
+{
+	int n;
+	cout << "enter n" << endl;
+	cin >> n;
+	return n;
+}
+void printrangefromnto1_usingwhile(int n)
+{
+	int counter = n+1;
+	cout << "range using while" << endl;
+
+	while (counter > 1)
+	{
+		counter--;
+		cout << counter << endl;
+	}
+}
+
+void printrangefromnto1_usingdowhile(int n)
+{
+	int counter = n+1;
+	cout << "range using do whole" << endl;
+
+	do
+	{
+		counter--;
+		cout << counter << endl;
+	} while (counter > 1);
+}
+
+void printrangefromnto1_usingforloop(int n)
+{
+	cout << "range using for loop" << endl;
+	for (int i = n; i >= 1; i--)
+	{
+		cout << i << endl;
+	}
+}
+
+int main()
+{
+	int n = Readnumbers();
+	
+	printrangefromnto1_usingwhile(n);
+	printrangefromnto1_usingdowhile(n);
+	printrangefromnto1_usingforloop(n);
+
+	return 0;
+
+}
