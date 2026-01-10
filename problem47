@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int Readposetivenumber(string massage)
+{
+	int number = 0;
+	do
+	{
+		cout << massage << endl;
+		cin >> number;
+
+	} while (number < 0);
+
+	return number;
+}
+
+float totalmonths(float loanamount, float monthlyinstallment)
+{
+	return loanamount / monthlyinstallment;
+}
+
+int main()
+{
+	float loanamount = Readposetivenumber("enter loan amount");
+	float monthlyinstallment = Readposetivenumber("enter monthly install ment");
+
+	cout << "total month of pay=" << totalmonths(loanamount, monthlyinstallment);
+
+	return 0;
+}
